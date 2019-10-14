@@ -1,0 +1,84 @@
+.services-we-provide {
+  padding: 145px 0 185px;
+}
+
+.services-list {
+  margin-top: 135px;
+  @include flexbox();
+  @include justify-content(space-between);
+  @include align-items(flex-start);
+}
+
+.tab {
+  @include flexbox();
+  @include flex-direction(column);
+  margin-right: 127px;
+  button {
+    transition: 0.3s;
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    border-radius: 2px;
+    background-color: #fff;
+    width: 104px;
+    height: 92px;
+    box-shadow: 0 0 1px 0 rgba(20, 20, 21, 0.14);
+    margin-bottom: 7px;
+    border: none;
+    &:hover {
+      box-shadow: 0 0 36px 0 rgba(20, 20, 21, 0.2);
+    }
+
+    &.active {
+      box-shadow: 0 0 36px 0 rgba(20, 20, 21, 0.2);
+    }
+  }
+  &-title {
+    margin-bottom: 25px;
+    font-size: 30px;
+    color: #000;
+    text-align: left;
+    position: relative;
+    &:before {
+      content: '';
+      width: 57px;
+      height: 3px;
+      background-color: #ff5c36;
+      position: absolute;
+      left: 0;
+      bottom: -13px;
+    }
+  }
+  &-text {
+    margin-bottom: 25px;
+    font-size: 16px;
+    color: #000;
+    text-align: left;
+  }
+  &-title-text{
+    width: calc(100% - 275px);
+  }
+}
+
+.tabcontent {
+  animation: fadeEffect 1s;
+  display: none;
+  overflow: hidden;
+  >div{
+    @include flexbox();
+    @include justify-content(space-between);
+    @include align-items(center);
+  }
+  .img-wrap{
+    width: 275px;
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

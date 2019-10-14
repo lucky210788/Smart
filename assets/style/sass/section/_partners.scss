@@ -1,0 +1,12 @@
+.partners{
+  background-color: #fbfbfb;
+  padding: 70px 0 95px;
+  &-list{
+    @include flexbox();
+    @include justify-content(space-between);
+    @include align-items(center);
+  }
+  .img-wrap{
+    width: 120px;
+  }
+}

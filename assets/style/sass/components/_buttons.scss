@@ -1,0 +1,44 @@
+.btn-main {
+  font-size: 16px;
+  color: #ffd6cd;
+  border: none;
+  border-radius: 27px;
+  background-color: #ff5c36;
+  box-shadow: 0 11px 20px 0 rgba(20, 20, 21, 0.08);
+  line-height: 55px;
+  width: 238px;
+  text-align: center;
+  position: relative;
+  &:before {
+    content: '';
+    width: 17px;
+    height: 10px;
+    background: url("../../images/arrow.png") no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    @include translate(0, -50%)
+  }
+  &:hover {
+    background-color: #8f3722;
+  }
+}
+
+.btn-process-list {
+  box-shadow: 0 0 14px 0 rgba(20, 20, 21, 0.05);
+  background-color: #fff;
+  width: 228px;
+  color: #918787;
+  @include flexbox();
+  @include justify-content(center);
+  @include align-items(center);
+  margin: auto;
+  img{
+    margin-right: 15px;
+  }
+  &:hover {
+    box-shadow: 0 6px 14px 0 rgba(20, 20, 21, 0.09);
+    background-color: #fff;
+  }
+}
